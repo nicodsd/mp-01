@@ -1,16 +1,29 @@
 ---
-
+import MenuCard from "../components/cards.astro";
+import Categories from "../components/categories.astro";
+import "../styles/global.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Menu Prueba</title>
+  </head>
+
+  <body class="w-full">
+    <MenuCard />
+    <Categories />
+  </body>
 </html>
+
+<style>
+  body {
+    background: #b3a2a2;
+    font-family: system-ui, sans-serif;
+    font-size: 4rem;
+    text-align: center;
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+// Props: image (string), title (string), description (string), price (string or number)
+//const { image, title, description, price } = Astro.props;
+let title = "Delicious Pizza";
+let description =
+  "A delightful pizza topped with fresh ingredients and baked to perfection.";
+let price = 12.99;
+let image =
+  "https://i0.wp.com/goula.lat/wp-content/uploads/2019/12/hamburguesa-beyond-meat-scaled-e1577396155298.jpg?fit=1600%2C1068&ssl=1";
+---
+
+<div
+  class="menu-card rounded overflow-hidden shadow-lg flex w-full bg-white p-3"
+>
+  <img src={image} alt={title} class="menu-card__image rounded-sm" />
+  <div class="menu-card__content text-left pl-4 w-full">
+    <h2 class="menu-card__title">{title}</h2>
+    <p class="menu-card__description">{description}</p>
+  </div>
+  <div class="menu-card__price-container flex items-end">
+      <span class="menu-card__description">c/u</span>
+      <span class="menu-card__price">${price}</span>
+  </div>
+</div>
+
+<style>
+  .menu-card {
+    font-family: sans-serif;
+  }
+  .menu-card__image {
+    background-color: #27ae60;
+    width: 135px;
+    height: 144px;
+    object-fit: cover;
+  }
+  .menu-card__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .menu-card__description {
+    color: #555;
+    font-size: 1rem;
+  }
+  .menu-card__price {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #000000;
+  }
+</style>

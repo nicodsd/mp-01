@@ -1,0 +1,50 @@
+---
+//import { categories } from '../data/categories'; // Ajusta la ruta según tu estructura
+
+// Simulación de datos si no tienes conexión a base de datos aún
+const categories = [
+  { id: 1, name: "Tecnología" },
+  { id: 2, name: "Cocina" },
+  { id: 3, name: "Deportes" },
+  { id: 4, name: "Arte" },
+];
+---
+
+<section class="categories-section text-base">
+  <nav class="categories-list">
+    {
+      categories.map((category) => (
+        <a href={`/#`}  class="category-item">
+          {category.name}
+        </a>
+      ))
+    }
+  </nav>
+</section>
+
+<style>
+  .categories-section {
+    margin: 2rem 0;
+  }
+  .categories-list {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+  }
+  .category-item {
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .category-item:hover {
+    border-bottom: 10px solid;
+    border-color: aquamarine;
+  }
+  .category-item:focus {
+    border-bottom: 10px solid;
+    border-color: aquamarine;
+  }
+</style>
