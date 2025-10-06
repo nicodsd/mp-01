@@ -1,6 +1,7 @@
 ---
 import MenuCard from "../components/cards.astro";
 import Categories from "../components/categories.astro";
+import Navbar from "../layouts/navbar.astro";
 import "../styles/global.css";
 ---
 
@@ -14,14 +15,19 @@ import "../styles/global.css";
   </head>
 
   <body class="w-full">
-    <MenuCard />
+    <Navbar />
     <Categories />
+    <section class="flex flex-col gap-0.5">
+      <MenuCard />
+      <MenuCard />
+      <MenuCard />
+    </section>
   </body>
 </html>
 
 <style>
   body {
-    background: #b3a2a2;
+    background: #f6f6f6;
     font-family: system-ui, sans-serif;
     font-size: 4rem;
     text-align: center;
