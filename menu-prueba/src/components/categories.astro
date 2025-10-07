@@ -3,14 +3,16 @@
 
 // Simulación de datos si no tienes conexión a base de datos aún
 const categories = [
-  { id: 1, name: "Tecnología" },
-  { id: 2, name: "Cocina" },
-  { id: 3, name: "Deportes" },
-  { id: 4, name: "Arte" },
+  { id: 1, name: "Entradas" },
+  { id: 2, name: "Platos" },
+  { id: 3, name: "Bebidas" },
+  { id: 4, name: "Postres" },
+  { id: 5, name: "Postres" },
+  { id: 6, name: "Postres" },
 ];
 ---
 
-<section class="categories-section text-base">
+<section class="categories-section text-base font-weight-500">
   <nav class="categories-list">
     {
       categories.map((category) => (
@@ -33,8 +35,9 @@ const categories = [
     padding: 0.5rem 1.2rem;
     text-decoration: none;
     color: #222;
-    font-weight: 500;
-    transition: background 0.2s;
+    border-bottom: 3px solid;
+    border-color: rgba(255, 0, 0, 0);
+    font-weight: 700;
   }
   .category-item:hover {
     border-bottom: 3px solid;

@@ -2,7 +2,9 @@
 import MenuCard from "../components/cards.astro";
 import Categories from "../components/categories.astro";
 import Navbar from "../layouts/navbar.astro";
+import PromoDay from "../components/promoDay.astro";
 import "../styles/global.css";
+import "../styles/font.css";
 ---
 
 <html lang="es">
@@ -12,24 +14,45 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Menu Prueba</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/font.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class="w-full">
+  <body class="w-full asap">
     <Navbar />
-    <Categories />
-    <section class="flex flex-col gap-0.5">
-      <MenuCard />
-      <MenuCard />
-      <MenuCard />
-    </section>
+    <div class="w-full p-2">
+      <section class="flex justify-center flex-col">
+        <PromoDay
+          title="Hamburguesas Simples Con Chilli"
+          imageUrl="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          description="1 Medallón de carne, verduras, queso cheddar, aderezos y chilli."
+          price="10.000"
+          bgColor="#000"
+        />
+      </section>
+      <section class="flex flex-col gap-0.5">
+        <Categories />
+        <MenuCard />
+        <MenuCard />
+        <MenuCard />
+        <MenuCard />
+        <MenuCard />
+      </section>
+    </div>
   </body>
-</html>
 
-<style>
-  body {
-    background: #f6f6f6;
-    font-family: system-ui, sans-serif;
-    font-size: 4rem;
-    text-align: center;
-  }
-</style>
+  <style>
+    body {
+      background: #f6f6f6;
+      font-family: system-ui, sans-serif;
+      font-size: 4rem;
+      text-align: center;
+    }
+  </style>
+</html>
