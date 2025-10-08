@@ -4,7 +4,7 @@ const { imageUrl, title, description, price, bgColor } = Astro.props;
 
 <h2
   class="text-left"
-  style="margin:0 0 0.4rem 0; font-size:1.4rem; font-weight: 800;"
+  style="margin:1rem 0 0.2rem 0; font-size:1.4rem; font-weight: 900;"
 >
   PROMO DEL DÍA
 </h2>
@@ -16,16 +16,16 @@ const { imageUrl, title, description, price, bgColor } = Astro.props;
     alt={title}
     style="width:100%; height:180px; object-fit:cover;"
   />
-  <div class="flex flex-row items-center" style="padding:1rem; color:#ffffff">
+  <div class="flex flex-row items-end" style="padding:1rem; color:#ffffff">
     <div class="flex flex-col text-left " style="">
-      <h2 style="font-weight: 800; font-size:1.7rem;">{title}</h2>
-      <p style="font-size: 13px;">
+      <h2 class="text-base/7.5" style="font-weight: 800; font-size:25px;">{title}</h2>
+      <p style="font-size: 13px; margin-top:0.2rem;">
         {description}
       </p>
     </div>
-    <div class="flex flex-col">
-      <p style="font-weight:bold; font-size:1rem; color:#f30505;">Antes ${price}</p>
-      <p style="font-weight:bold; font-size:1.2rem; color:#ffffff; font-size:1.8rem; font-weight: 800;">${price}</p>
+    <div class="flex flex-col justify-end items-end w-1/2">
+      <p style="font-weight:semibold; font-size:14px; color:#ff4e4e;">Antes ${price}</p>
+      <p style="color:#ffffff; font-size:30px; font-weight: 800;">${price}</p>
     </div>
   </div>
 </div>

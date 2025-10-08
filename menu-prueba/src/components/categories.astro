@@ -6,17 +6,17 @@ const categories = [
   { id: 1, name: "Entradas" },
   { id: 2, name: "Platos" },
   { id: 3, name: "Bebidas" },
-  { id: 4, name: "Postres" },
-  { id: 5, name: "Postres" },
-  { id: 6, name: "Postres" },
+  { id: 4, name: "Alcohol" },
+  { id: 5, name: "Ensaladas" },
+  { id: 6, name: "Cafetería" },
 ];
 ---
 
-<section class="categories-section text-base font-weight-500">
+<section class="categories-section text-[2vh] font-weight-500">
   <nav class="categories-list">
     {
       categories.map((category) => (
-        <a href={`/#`}  class="category-item">
+        <a href={`/#`} class="category-item">
           {category.name}
         </a>
       ))
@@ -25,10 +25,19 @@ const categories = [
 </section>
 
 <style>
+  section::-webkit-scrollbar {
+    /* Para navegadores basados en Webkit (Chrome, Safari, Opera) */
+      display: none;
+    }
+    /* Para Firefox */
+    .categories-list { 
+      scrollbar-width: none; /* Oculta la barra de scroll */
+      overflow-y: scroll; /* Mantiene la funcionalidad de desplazamiento */
+    }
+    
   .categories-list {
     display: flex;
-    gap: 1rem;
-    overflow-x: auto;
+    gap: 0.1rem;
     padding: 1rem 0;
   }
   .category-item {
