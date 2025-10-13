@@ -2,18 +2,11 @@
 //import { categories } from '../data/categories'; // Ajusta la ruta según tu estructura
 
 // Simulación de datos si no tienes conexión a base de datos aún
-const categories = [
-  { id: 1, name: "Entradas" },
-  { id: 2, name: "Platos" },
-  { id: 3, name: "Bebidas" },
-  { id: 4, name: "Alcohol" },
-  { id: 5, name: "Ensaladas" },
-  { id: 6, name: "Cafetería" },
-];
+import categories from '../data/categories.js';
 ---
 
-<section class="categories-section text-[2vh] font-weight-500">
-  <nav class="categories-list">
+<section class="mt-3 text-[2vh] font-weight-500">
+  <div class="categories-list">
     {
       categories.map((category) => (
         <a href={`/#`} class="category-item">
@@ -21,7 +14,7 @@ const categories = [
         </a>
       ))
     }
-  </nav>
+  </div>
 </section>
 
 <style>
@@ -37,11 +30,11 @@ const categories = [
     
   .categories-list {
     display: flex;
-    gap: 0.1rem;
-    padding: 1rem 0;
+    gap: 1.7rem;
+    padding: 1rem 1rem;
   }
   .category-item {
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem .4rem;
     text-decoration: none;
     color: #222;
     border-bottom: 3px solid;

@@ -1,33 +1,36 @@
 ---
-// Props: image (string), title (string), description (string), price (string or number)
-//const { image, title, description, price } = Astro.props;
-let title = "Empanadas";
-let description =
-  "A delightful pizza topped with fresh ingredients and baked to perfection.";
-let price = 12.99;
-let image =
-  "https://i0.wp.com/goula.lat/wp-content/uploads/2019/12/hamburguesa-beyond-meat-scaled-e1577396155298.jpg?fit=1600%2C1068&ssl=1";
+// Props: image (string), name (string), description (string), price (string or number)
+//const { image, name, description, price } = Astro.props;
+import foods from "../data/foods/foods-1";
 ---
 
-<div
-  class="menu-card rounded-[7px] overflow-hidden shadow-md flex w-full bg-white p-3.5"
->
-  <img src={image} alt={title} class="menu-card__image rounded-[7px]" />
-  <div class="flex flex-col justify-between pl-3 w-full">
-    <div class="menu-card__content text-left w-full">
-      <h2 class="menu-card__title">{title}</h2>
-      <p class="menu-card__description">{description}</p>
-    </div>
-    <div class="menu-card__price-container flex items-center gap-1.5 justify-end">
-      <span class="menu-card__description">c/u</span>
-      <span class="menu-card__price" style="font-size: 22px;">${price}</span>
-    </div>
-  </div>
+<div>
+  {
+    foods.map( (food) => (
+      <div class="menu-card rounded-[7px] overflow-hidden shadow-md flex w-full bg-white p-3.5">
+        <img
+          src={food.image}
+          alt={food.name}
+          class="menu-card__image rounded-[7px]"
+        />
+        <div class="flex flex-col justify-between pl-3 w-full">
+          <div class="menu-card__content text-left w-full">
+            <h2 class="menu-card__title">{food.name}</h2>
+            <p class="menu-card__description">{food.description}</p>
+          </div>
+          <div class="menu-card__price-container flex items-center gap-1.5 justify-end">
+            <span class="menu-card__description">c/u</span>
+            <span class="menu-card__price" style="font-size: 22px;">
+              ${food.price}
+            </span>
+          </div>
+        </div>
+      </div>
+    ))
+  }
 </div>
 
 <style>
-  .menu-card {
-  }
   .menu-card__image {
     background-color: #27ae60;
     width: 135px;
