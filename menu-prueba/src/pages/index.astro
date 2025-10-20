@@ -3,6 +3,7 @@ import MenuCard from "../components/cards.astro";
 import Categories from "../components/categories.astro";
 import Navbar from "../layouts/navbar.astro";
 import PromoDay from "../components/promoDay.astro";
+import Footer from "../components/footer.astro";
 import "../styles/global.css";
 import "../styles/font.css";
 ---
@@ -25,31 +26,22 @@ import "../styles/font.css";
   </head>
 
   <body class="w-full asap">
-    <Navbar />
+    <Navbar text="Nombre" />
     <div class="w-full p-[.6rem]">
       <section class="flex justify-center flex-col">
-        <PromoDay
-          title="HAMBURGUESAS SIMPLES CON CHILLI"
-          imageUrl="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-          description="1 Medallón de carne, verduras, queso cheddar, aderezos y chilli."
-          price="10.000"
-          bgColor="#000"
-        />
+        <PromoDay />
       </section>
       <section class="flex flex-col gap-0.5">
         <Categories />
         <MenuCard />
-        <MenuCard />
-        <MenuCard /> 
-        <MenuCard />
       </section>
     </div>
   </body>
+  <Footer />
 
   <style>
-    body {
+    html {
       background: #f6f6f6;
-      font-size: 4rem;
       text-align: center;
     }
   </style>

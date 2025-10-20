@@ -3,36 +3,36 @@ const foods = [
         id: 1,
         name: "Pizza Margherita",
         description: "Clásica pizza italiana con tomate, mozzarella y albahaca.",
-        price: 8.99,
-        image: "/images/pizza-margherita.jpg"
+        price: 10000,
+        image: "public/images/foods/pizzas/R.jpeg"
     },
     {
         id: 2,
         name: "Hamburguesa",
         description: "Jugosa hamburguesa de res con queso, lechuga y tomate.",
-        price: 7.5,
-        image: "/images/hamburguesa.jpg"
+        price: 7000,
+        image: "public/images/foods/burguers/OIP.webp"
     },
     {
         id: 3,
         name: "Ensalada César",
         description: "Ensalada fresca con pollo, crutones y aderezo César.",
-        price: 6.0,
-        image: "/images/ensalada-cesar.jpg"
+        price: 6000,
+        image: "public/images/foods/picadas/5e997e650c7b6.jpeg" 
     },
     {
         id: 4,
         name: "Sushi Roll",
         description: "Rollos de sushi rellenos de salmón y aguacate.",
-        price: 9.5,
-        image: "/images/sushi-roll.jpg"
+        price: 9500,
+        image: "public/images/foods/picadas/R.jpeg"
     },
     {
         id: 5,
         name: "Tacos al Pastor",
         description: "Tacos mexicanos de cerdo marinado con piña y cebolla.",
-        price: 5.75,
-        image: "/images/tacos-al-pastor.jpg"
+        price: 5000,
+        image: "public/images/foods/tacos/OIP.webp"
     }
 ];
 

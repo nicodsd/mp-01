@@ -1,41 +1,66 @@
 ---
-/* const navItems = [
-  { name: "Inicio", href: "/" },
-  { name: "Servicios", href: "/servicios" },
-  { name: "Contacto", href: "/contacto" },
-]; */
+import logo from "../../public/images/logo/OIP.jpg";
+const { text, newfood } = Astro.props;
 ---
 
-<nav class="h-[54px] p-2 flex justify-between w-full border-b border-gray-100 shadow-xs">
-  <div class="flex items-center h-full">
-    <!-- Imagen -->
-    <img src={'"/logo.png" || style="background-color: blue;"'} alt="Logo" class="rounded-full h-10 w-10 bg-black" />
-    <!-- Texto -->
-    <span class="ml-3" style="font-size: 1.2rem; font-weight: bold;"
-      >Nombre</span
-    >
-  </div>
-
-  <a style="font-size: 16px; font-weight: 800; color:rgb(0, 0, 0); background-color: rgb(51, 255, 0);" class="min-w-20 w-[10vh] min-h-10 h-5 mr-4 rounded-lg" href=""> <span style="font-size: 1.4rem;">+</span> NUEVO </a>
-
-  <!--  <span
-    class="w-10 h-10"
-    style="background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;"
-  >
-    Menu
-  </span> -->
-
-  <!-- Navegación a la derecha -->
-  <!-- <div style="display: flex; gap: 1rem;">
-    {
-      navItems.map((item) => (
+<nav
+  class="h-[54px] p-2 flex justify-between items-center w-full border-b border-gray-100 shadow-xs"
+>
+  {
+    newfood === true ? (
+      <!-- Texto -->
+          <span class="ml-3" style="font-size: 1.2rem; font-weight: bold;"
+            >{text}</span
+          >
+      <div class="flex items-center justify-end h-full">
         <a
-          href={item.href}
-          style="text-decoration: none; color: #333; font-weight: 500;"
+          style="font-size: 12px; font-weight: 600; color:rgb(0, 0, 0);"
+          class="min-w-20 w-[10vh] min-h-10 h-5 mr-2 rounded-lg"
+          href="/"
         >
-          {item.name}
+          {" "}
+          CANCELAR{" "}
         </a>
-      ))
-    }
-  </div> -->
+        <a
+          style="font-size: 12px; font-weight: 600; color:rgb(0, 0, 0); background-color: rgb(51, 255, 0);"
+          class="min-w-20 w-[10vh] min-h-8 h-3 mr-4 rounded-lg"
+          href="/"
+        >
+          {" "}
+          ACEPTAR{" "}
+        </a>
+      </div>
+    ) : (
+        <div class="flex items-center h-full">
+          <!-- Imagen -->
+          <a href="/">
+            <img
+              src="../../public/images/logo/OIP.webp"
+              alt="Logo"
+              class="rounded-full h-10 w-10 bg-black ml-1"
+            />
+          </a>
+          <!-- Texto -->
+          <span class="ml-3" style="font-size: 1.2rem; font-weight: bold;"
+            >{text}</span
+          >
+        </div>
+      <a
+        style="font-size: 13px; font-weight: 800; color:rgb(0, 0, 0); background-color: rgb(51, 255, 0);"
+        class="min-w-20 w-[10vh] min-h-8 h-3 mr-4 rounded-lg"
+        href="/newFood"
+      >
+        NUEVO
+      </a>
+
+)}
 </nav>
+
+<style>
+  a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
